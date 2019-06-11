@@ -9,8 +9,21 @@
 import SwiftUI
 
 struct StatTextView : View {
+    
+    var statName:String = "Age"
+    var statValue:String = "29"
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .center) {
+            Text(statName + ":")
+            .font(.system(size: 30))
+            .fontWeight(.bold)
+            .padding(.leading, 30)
+            Text(statValue)
+            .font(.system(size: 24))
+            .fontWeight(.light)
+            Spacer()
+        }
     }
 }
 
