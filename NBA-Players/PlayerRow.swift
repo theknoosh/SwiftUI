@@ -15,12 +15,12 @@ struct PlayerRow : View {
     var body: some View {
         HStack {
             Image(player.imageName).resizable()
-                .scaledToFit()
+                .frame(width: 50.0, height: 50.0)
                 .clipShape(Circle())
                 .background(Circle()).foregroundColor(player.team.color)
                 .padding(.leading, 25)
             Text(player.name)
-                .font(.largeTitle)
+                .font(.system(size: 25.0))
                 .fontWeight(.bold)
                 .padding(.leading, 15)
             Spacer()
@@ -37,7 +37,6 @@ struct PlayerRow_Previews : PreviewProvider {
             PlayerRow(player: players[2]).previewLayout(.fixed(width: 500, height: 100))
             PlayerRow(player: players[3]).previewLayout(.fixed(width: 500, height: 100))
             PlayerRow(player: players[4]).previewLayout(.fixed(width: 500, height: 100))
-
         }
     }
 }
